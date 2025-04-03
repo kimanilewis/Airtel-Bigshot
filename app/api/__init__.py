@@ -3,7 +3,7 @@ Package initialization for app API endpoints.
 """
 from fastapi import APIRouter
 
-router = APIRouter(prefix="/airtel/c2b")
+router = APIRouter(prefix="/api")
 
 from app.api.validate import router as validate_router
 from app.api.process import router as process_router
