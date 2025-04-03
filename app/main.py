@@ -35,7 +35,7 @@ app.add_middleware(
 app.include_router(auth_router, prefix="/auth", tags=["authentication"])
 app.include_router(
     api_router, 
-    prefix="/api", 
+    prefix="/airtel/c2b/api", 
     dependencies=[Depends(get_current_active_user)]  # Secure all API routes
 )
 
@@ -44,7 +44,7 @@ app.include_router(
 async def startup_event():
     """Initialize database on startup."""
     logger.info("Initializing database")
-    init_db()
+    await init_db()
     logger.info("Database initialized")
 
 @app.get("/")
