@@ -13,12 +13,14 @@ from app.utils.security import get_current_active_user
 # Set up logger
 logger = setup_logger("main")
 
-# Create FastAPI application
+# Create FastAPI application with root_path
 app = FastAPI(
     title="Airtel Kenya C2B IPN API",
     description="API for handling Airtel Kenya C2B Instant Payment Notifications",
     version="1.0.0",
+    root_path="/airtel/api"  # Add this line to set the base path
 )
+
 
 # Add CORS middleware
 app.add_middleware(
