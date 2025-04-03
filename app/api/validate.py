@@ -42,7 +42,7 @@ def parse_xml_request(xml_content: str) -> Dict[str, Any]:
             detail=f"Invalid XML format: {str(e)}"
         )
 
-@router.post("/")
+@router.post("")
 async def validate_ipn(
     request: Request, 
     db: Session = Depends(get_db),

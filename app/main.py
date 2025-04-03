@@ -18,7 +18,7 @@ app = FastAPI(
     title="Airtel Kenya C2B IPN API",
     description="API for handling Airtel Kenya C2B Instant Payment Notifications",
     version="1.0.0",
-    root_path="/airtel/c2b"  # Add this line to set the base path
+    # root_path="/airtel/c2b"  # Add this line to set the base path
 )
 
 
