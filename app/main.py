@@ -44,7 +44,7 @@ app.include_router(
 async def startup_event():
     """Initialize database on startup."""
     logger.info("Initializing database")
-    await init_db()
+    init_db()
     logger.info("Database initialized")
 
 @app.get("/")
