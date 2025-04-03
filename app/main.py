@@ -35,7 +35,7 @@ app.add_middleware(
 app.include_router(auth_router, prefix="/auth", tags=["authentication"])
 app.include_router(
     api_router, 
-    prefix="/airtel/c2b/api", 
+    prefix="/airtel/c2b", 
     dependencies=[Depends(get_current_active_user)]  # Secure all API routes
 )
 
